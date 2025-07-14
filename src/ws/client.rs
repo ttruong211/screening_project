@@ -69,7 +69,6 @@ pub async fn deserialize_book_ticket(mut collector: FragmentCollector<TokioIo<Up
                         }
                     } 
 
-
                     // Every 5 seconds, compute and print summary
                     if last_print.elapsed() >= Duration::from_secs(5) && symbols.iter().all(|s| symbol_prices.contains_key(s)) {
                         println!("----- Market Summary -----");
